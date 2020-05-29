@@ -1,4 +1,91 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    align-items: center;
+    background-color: #111;
+}
+
+.pickerbox {
+    margin: 0 auto;
+    min-width: 50%;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 100%;
+    /* border-radius: 10px; */
+    padding: 10px;
     background-color: #222;
+    box-shadow: -10px 10px #000;
+    border: 1px dashed #333;
+}
+
+.title {
+    text-align: center;
+    text-transform: lowercase;
+    /* background-color: #DDD; */
+    color: rgb(255, 255, 255);
+    margin-bottom: 5%;
+    text-shadow: -5px 5px 0px rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 35px;
+}
+
+.controles {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    width: 100%;
+    align-items: center;
+    /* border: 1px solid #DDD; */
+    /* background-color: #DDD; */
+}
+
+.controles .texto {
+    box-shadow: -3px 3px #000;
+    display: grid;
+    align-items: center;
+    height: 3em;
+    margin-right: 10%;
+    border: 1px dashed #333;
+    /* border-radius: 50%; */
+}
+.controles .texto input {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    background-color: unset;
+    width: 100%;
+    text-align: center;
+    background-color: unset;
+}
+
+.controles .slider {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: unset;
+}
+
+.controles .caixa {
+    display: grid;
+    align-items: center;
+    padding: 25%;
+    background-color:rgb(0, 0, 0);
+    margin-left: 15%;
+    /* border-radius: 50%; */
+    height: 3em;
+    box-shadow: -3px 3px #000;
+    border: 1px dashed #333;
 }
