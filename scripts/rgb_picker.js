@@ -21,7 +21,7 @@ function setColor(colorID, colorValue, r, g, b) {
     }
     let rgbBoxColor = `rgb(${r}, ${g}, ${b})`;
     let rgbBGColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
-    document.querySelector(`.${colorID}`).attributes.value.textContent = colorValue;
+    document.querySelector(`#${colorID}TextBox`).attributes.value.textContent = colorValue;
     document.querySelector(`#${colorID}ColorBox`).style.backgroundColor = rgbBoxColor;
     document.querySelector(`#container`).style.backgroundColor=`${rgbBGColor}`;
 }
