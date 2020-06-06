@@ -7,11 +7,13 @@
 
 #container {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
     align-items: center;
     background-color: #000;
+    position: absolute;
 }
 
 .pickerbox {
@@ -33,7 +35,8 @@
     margin-bottom: 5%;
     text-shadow: -5px 5px 0px rgb(0, 0, 0);
     font-family: monospace;
-    font-size: 35px;
+    font-size: 45px;
+
 }
 
 .controles {
@@ -61,7 +64,7 @@
     background-color: unset;
 }
 
-.controles .slider {
+.controles .sliderBox {
     display: grid;
     align-items: center;
     height: 100%;
@@ -79,3 +82,17 @@
     box-shadow: -3px 3px #000;
     border: 1px dashed #333;
 }
+
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+animation: rainbow 18s ease infinite;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke: 2px black;
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+

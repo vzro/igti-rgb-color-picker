@@ -1,15 +1,15 @@
-var rgb = {'r':'0', 'g':'0', 'b':'0'};
+let rgb = {'r':'0', 'g':'0', 'b':'0'};
 
 window.addEventListener('load', () => {
-    getSliders('.slider');
+    getSliders('.sliderBox');
 });
 
-function getSliders (sliderClass) {
-    r = g = b = 0;
-    document.querySelectorAll(sliderClass)
-    .forEach(child => child.addEventListener('input', color => {
-        let colorID = color.target.attributes.id.value;
-        let colorValue = color.target.value;
+function getSliders (parentDiv) {
+    let colorID = colorValue = r = g = b = 0;
+    document.querySelectorAll(parentDiv)
+    .forEach(inputRange => inputRange.addEventListener('input', inputRange => {
+        colorID = inputRange.target.attributes.id.value;
+        colorValue = inputRange.target.value;
         setColor(colorID, colorValue, r, g, b);
     }))}
 
