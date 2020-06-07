@@ -27,33 +27,39 @@
     left: 0;
     right: 0;
     z-index: -1;
-    width: 71%;
-    height: 101%;
+    width: 41%;
+    height: 100%;
     margin: 0 auto;
     background: linear-gradient(1deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    animation: blurBoxShake 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite;
+    animation: blurBoxShake 7s cubic-bezier(0.175, 0.885, 0.32, 1.275) both infinite;
     background-size: 3000% 1%;
+    box-shadow: 0px 0px 0px 20px black;
+    transform: skew(-3deg, 3deg);
 }
 @keyframes blurBoxShake {
-    0% { rotate: 0deg; filter: blur(0); background-position: 0% 0%; }
-    3% {rotate: 0.3deg; filter: blur(3px); background-position: 100% 0%;}
-    5% {filter: blur(-5);}
-    9% {filter: blur(5px);}
-    100% {rotate: -0.6deg;}
+    0% { rotate: 4deg; filter: blur(0); background-position: 0% 0%; transform: skew(4deg) }
+    7% { rotate: 4.3deg; filter: blur(2); background-position: 100% 0%; }
+    8% { filter: blur(0);}
+    9% { filter: blur(5px);}
+    91% { rotate: 4.3deg; transform: skew(0deg, 0deg)}
+    94% { rotate: 4.6deg; transform: skew(1deg, 1deg)}
+    98% { rotate: 4.3deg; transform: skew(-1deg, -1deg)}
+    100% { rotate: 4deg; transform: skew(1deg, 1deg)}
 }
 
 #rgbBorder {
     background: linear-gradient(666deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 3000% 1%;
-    animation: rainbow 10s linear alternate infinite;
+    animation: rainbow 50s cubic-bezier(0.175, 0.885, 0.32, 1.275) both infinite;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100%;
     align-items: center;
-    margin: 0 auto;
-    min-width: 50%;
-    max-width: 70%;
-    padding: 2.5px;
+    margin: 1% auto;
+    min-width: 30%;
+    max-width: 40%;
+    padding: 6px;
+    transform: rotate(4deg);
 }
 @keyframes rainbow { 
     0% { background-position: 0% 0%; }
@@ -75,6 +81,8 @@
     font-size: 25px;
     margin: 5% 0;
     font-style: italic;
+    transform: rotate(-5deg);
+    position: relative;
 }
 .rgbTitle {
     font-size: 55px;
@@ -84,12 +92,15 @@
     color: #000;
     background-clip: text;
     -webkit-text-stroke: 5px transparent;
-    animation: rainbowTitle 1s linear alternate infinite both;
+    animation: rainbowTitle 5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards infinite;
     background-size: 500% 120%;
 }
 
 @keyframes rainbowTitle { 
-    0% { background-position: 0% 0%; }
+    25% { opacity: 1; }
+    29% { opacity: 0; background-size: 500% 120%; }
+    33% { opacity: 1; background-size: 0% 0%; }
+    35% { opacity: 1; background-size: 500% 120%; }
     100% { background-position: 100% 100%; }
 }
 
@@ -175,4 +186,29 @@ input[type=range]::-moz-range-thumb {
     cursor: pointer;
     border: 2px dotted #CCC;
     outline: unset;
+}
+
+@media (max-width: 600px) {
+    #rgbBorder {
+        min-width: 70%;
+    }
+    #blurBox {
+        min-width: 70%;
+    }
+    #title {
+        display: block;
+        position: relative;
+        z-index: 5;
+    
+    }
+    .rgbTitle {
+        z-index: 1;
+    }
+    .regularTitle {
+        position: absolute;
+        bottom: -15%;
+        left: 50%;
+        z-index: 6;
+        font-size: 0.69em;
+    }
 }
