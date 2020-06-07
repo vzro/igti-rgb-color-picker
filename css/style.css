@@ -31,10 +31,10 @@
     height: 101%;
     margin: 0 auto;
     background: linear-gradient(1deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    animation: test 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite;
+    animation: blurBoxShake 5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite;
     background-size: 3000% 1%;
 }
-@keyframes test {
+@keyframes blurBoxShake {
     0% { rotate: 0deg; filter: blur(0); background-position: 0% 0%; }
     3% {rotate: 0.3deg; filter: blur(3px); background-position: 100% 0%;}
     5% {filter: blur(-5);}
