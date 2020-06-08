@@ -1,4 +1,4 @@
-## :school_satchel: IGTI Full Stack Developer Bootcamp (2020)
+## :school_satchel: IGTI Full Stack Developer Bootcamp (2020) :camping:
 
 ### :rainbow: RGB Picker :dart:
 
